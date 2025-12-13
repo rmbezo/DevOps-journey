@@ -1,0 +1,1 @@
+- To start a app, "docker build -t name:tag ." , then "docker run -d -p 5555:8080 name:tag", after that open lochalhost:5555 in browser. That's all

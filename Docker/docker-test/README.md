@@ -1,0 +1,1 @@
+- To start you have to build docker file with command: "docker build -t myapp:1.0 ." , then start it with "docker run myapp:1.0"

@@ -1,0 +1,26 @@
+# Node.js
+frontend/node_modules/
+frontend/build/
+frontend/.env
+
+# Maven
+backend/target/
+backend/.idea/
+backend/.mvn/
+backend/mvnw*
+backend/*.log
+
+# IDE/OS specific
+.idea/
+*.iml
+*.vscode/
+*.DS_Store
+*.env
+*.log
+*.swp
+__pycache__/
+Thumbs.db
+
+# Docker
+*.DS_Store
+docker-compose.override.yml

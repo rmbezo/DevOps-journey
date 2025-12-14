@@ -1,4 +1,13 @@
-- To start: "docker build -t name:tag ." 
-- then "docker run -d -p 9999:8080 name:tag" 
-- then open browser and type in url section: "localhost:9999"
+- To start: 
+```
+    docker build -t name:tag .
+```
+- then 
+```
+    docker run -d -p 9999:8080 name:tag
+```
+- then open browser and type in url section:
+```
+    localhost:9999
+```
 - Enjoy

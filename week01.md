@@ -5,5 +5,6 @@
 
 - SSH - Подключение к ВМ из терминала Windows + создание и подключение к репозиторию через SSH
 
+- Bash scripts - basics
 
 - Git (clone, commit, push, branch, merge, PR, .gitignore, gitflow)

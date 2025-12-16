@@ -2,6 +2,10 @@
 
 - First use create_table.sql file
 - Here is example of the table:
+
+
+
+
 ![alt text](image.png)
 
 Hope you enjoy!

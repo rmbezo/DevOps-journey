@@ -1,3 +1,5 @@
 - Linux (disks, member, RAM, df, du, lsblk, iotop, free, meminfo)
 - Docker (basics commands, compose, volumes, bind mounts)
-- Data bases 
+- Data bases (PostgreSQL, DBeaver, SQL basics, JOIN(LEFT,RIGHT))
+- Python practice
+- CI/CD

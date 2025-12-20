@@ -2,4 +2,5 @@
 - Docker (basics commands, compose, volumes, bind mounts)
 - Data bases (PostgreSQL, DBeaver, SQL basics, JOIN(LEFT,RIGHT))
 - Python practice
-- CI/CD
+- CI (GitHub Actions)
+- FastAPI, Worker, Nginx

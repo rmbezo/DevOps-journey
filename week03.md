@@ -1,1 +1,3 @@
--CI/CD
+- CI/CD (GitHub)
+- Monitoring (Graphana + Prometheus)
+- Project Task-URL-Platform

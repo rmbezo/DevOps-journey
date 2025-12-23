@@ -1,3 +1,4 @@
 - CI/CD (GitHub, GitLab CI/CD [GitLab-Repository](https://gitlab.com/zamasulolmeme123/taskurlproject/))
-- Monitoring (Graphana + Prometheus)
+- Monitoring (Graphana + Prometheus a little of Loki)
 - Project Task-URL-Platform
+- Kubernetes (kubectl, worker node, master node / control plane)

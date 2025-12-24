@@ -71,3 +71,29 @@ and:
 
 
 ![example](./images/image-2.png)
+
+
+- To check web is working type:
+
+```
+    curl -I http://127.0.0.1:8081
+```
+
+the answer should be: 200 Ok
+
+
+
+![example](./images/image-3.png)
+
+
+
+# Web site example
+
+
+
+![example](image-4.png)
+
+
+
+
+## All next steps will be in [Practice.md](https://github.com/zamasulolmeme123/DevOps-journey/lab-linux/Practice.md)

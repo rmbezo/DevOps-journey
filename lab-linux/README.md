@@ -91,7 +91,7 @@ the answer should be: 200 Ok
 
 
 
-![example](image-4.png)
+![example](./images/image-4.png)
 
 
 

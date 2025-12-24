@@ -96,4 +96,4 @@ the answer should be: 200 Ok
 
 
 
-## All next steps will be in [Error-simulation.md](https://github.com/zamasulolmeme123/DevOps-journey/lab-linux/Erorr-simulation.md)
+## All next steps will be in [Error-simulation.md](https://github.com/zamasulolmeme123/DevOps-journey/blob/main/lab-linux/Error-simulation.md)

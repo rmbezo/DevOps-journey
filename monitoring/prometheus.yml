@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  # Сам Prometheus 
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['prometheus:9090']
+
+  # Метрики машины из node_exporter
+  - job_name: 'node'
+    static_configs:
+      - targets: ['node-exporter:9100']

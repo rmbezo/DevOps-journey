@@ -1,0 +1,4 @@
+FROM python:3.11.14-alpine3.23
+WORKDIR /usr/src/app
+COPY sum.py .
+CMD ["python", "./sum.py"]

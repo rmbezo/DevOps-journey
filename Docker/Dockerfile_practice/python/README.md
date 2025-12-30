@@ -1,4 +1,4 @@
-## Small app with python and docker
+# Small app with python and docker
 
 - To start run:
 

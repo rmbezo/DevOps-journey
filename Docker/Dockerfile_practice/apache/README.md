@@ -1,4 +1,4 @@
-## Apache simple dockerfile example
+# Apache simple dockerfile example
 
 - To start with basic html:
 

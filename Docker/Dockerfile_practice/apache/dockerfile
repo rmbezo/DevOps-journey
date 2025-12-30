@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 LABEL author=Roman
 RUN apt-get update
-RUN apt-get install nginx -y
+RUN apt-get install apache2 -y
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["apache2ctl", "-D", "FOREGROUND"]
 

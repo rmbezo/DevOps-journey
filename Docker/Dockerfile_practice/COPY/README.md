@@ -10,4 +10,4 @@
 - If you want to put your site change /files/index.html ////
 or when start add -e OWNER=yourname -e TYPE=yourtype
 
-- Also if you want to use nginx instead apache change RUN line and CMD line 
+- Also if you want to use nginx instead apache change RUN line and CMD line(and volumes instead of /var/www/html/ use /usr/share/nginx/html/)

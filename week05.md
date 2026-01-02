@@ -1,0 +1,1 @@
+- Change OS to Omarchy (arch based)

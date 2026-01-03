@@ -1,0 +1,18 @@
+services:
+  app-data:
+    container_name: ubuntu
+    image: ubuntu:22.04
+
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+      - "8080:80"
+    environment:
+      - TEST_ENV=dolche_gabana
+    volumes:
+      - "Nginx:/usr/share/nginx/html/"
+
+
+volumes: 
+  Nginx:

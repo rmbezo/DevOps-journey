@@ -1,0 +1,12 @@
+- name: Проверка подключения к ВМ
+  hosts: virtuals
+  become: yes  # Выполнение команд от root (потребует пароль sudo, если не настроен nopasswd)
+  tasks:
+    - name: Ping host
+      ping:
+
+    - name: Установка Nginx
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes

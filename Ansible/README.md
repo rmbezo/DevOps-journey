@@ -12,4 +12,14 @@
 
 должно быть что то вроде: 
 
-![alt text](./images/image.png)
+![example](./images/image.png)
+
+
+
+## fastcheck server alivness
+
+```
+    ansible virtuals -i hosts -m ping
+```
+
+![example](./images/image2.png)

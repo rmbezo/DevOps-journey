@@ -1,3 +1,4 @@
+---
 - name: Проверка и установка Nginx
   hosts: virtuals
   become: true

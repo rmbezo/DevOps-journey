@@ -1,0 +1,3 @@
+ansible_user: roman
+ansible_ssh_private_key_file: /home/roman/.ssh/id_ed25519
+ansible_python_interpreter: /usr/bin/python3

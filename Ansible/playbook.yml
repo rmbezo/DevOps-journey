@@ -1,12 +1,25 @@
-- name: Проверка подключения к ВМ
+- name: Проверка и установка Nginx
   hosts: virtuals
-  become: yes  # Выполнение команд от root (потребует пароль sudo, если не настроен nopasswd)
-  tasks:
-    - name: Ping host
-      ping:
+  become: true
 
-    - name: Установка Nginx
-      apt:
+  tasks:
+    - name: Проверка доступности хоста
+      ansible.builtin.ping:
+
+    - name: Установить nginx
+      ansible.builtin.apt:
         name: nginx
         state: present
         update_cache: yes
+
+    - name: Запустить и включить nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
+
+    - name: Проверить доступность nginx по HTTP
+      ansible.builtin.uri:
+        url: http://localhost
+        status_code: 200
+        

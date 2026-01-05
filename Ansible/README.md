@@ -3,12 +3,15 @@
 - for ansible practice i use VM's with debian
 
 ```
-    ansible-playbook playbook.yml -K
+ansible-playbook playbook.yml -K
 ```
 
 ## что делает наш ansible?
 
-- В файле playbook.yml описаны действия ansible на машине
+- В файле playbook.yml описаны наша roles nginx
+
+затем остальные действия описаны в roles/nginx 
+
 
 должно быть что то вроде: 
 
@@ -20,7 +23,7 @@
 - fastcheck servers alivness:
 
 ```
-    ansible virtuals -m ping
+ansible virtuals -m ping
 ```
 
 ![example](./images/image2.png)

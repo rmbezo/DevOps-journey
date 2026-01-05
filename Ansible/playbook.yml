@@ -1,26 +1,7 @@
 ---
-- name: Проверка и установка Nginx
+- name: Configure virtuals servers
   hosts: virtuals
-  become: true
+  become: yes
 
-  tasks:
-    - name: Проверка доступности хоста
-      ansible.builtin.ping:
-
-    - name: Установить nginx
-      ansible.builtin.apt:
-        name: nginx
-        state: present
-        update_cache: yes
-
-    - name: Запустить и включить nginx
-      ansible.builtin.service:
-        name: nginx
-        state: started
-        enabled: true
-
-    - name: Проверить доступность nginx по HTTP
-      ansible.builtin.uri:
-        url: http://localhost
-        status_code: 200
-        
+  roles:
+    - nginx

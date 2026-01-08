@@ -17,4 +17,6 @@ first kubernetes cluster with RKE2.
 
 - Ubuntu
 - server with DNS and NFS
-- 16GB RAM
+- 20GB RAM
+
+![alt text](./images/image2.png)

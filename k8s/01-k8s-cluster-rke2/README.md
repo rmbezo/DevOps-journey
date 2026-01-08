@@ -3,6 +3,10 @@
 first kubernetes cluster with RKE2.
 
 
+![alt text](./images/image.png)
+
+
+
 ## VM's
 
 - debian
@@ -11,4 +15,6 @@ first kubernetes cluster with RKE2.
 
 ## DNS and NFS
 
+- Ubuntu
 - server with DNS and NFS
+- 16GB RAM

@@ -8,3 +8,7 @@ first kubernetes cluster with RKE2.
 - debian
 - 4GB RAM
 - Processors: 4
+
+## DNS and NFS
+
+- server with DNS and NFS

@@ -2,7 +2,7 @@
 - Here I will write my entire journey and every tool I learned.
 - Здесь я буду стараться описать все инструменты что я изучил.
 
-## week..md files
+## Weeks folder
 
 - In my md Weekly Files, I write about the tools I learned or started using that week.
 

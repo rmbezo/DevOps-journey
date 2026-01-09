@@ -2,6 +2,8 @@
 
 first kubernetes cluster with RKE2.
 
+- dns_nfs.md = DNS and NFS server configuration
+
 
 ![alt text](./images/image.png)
 

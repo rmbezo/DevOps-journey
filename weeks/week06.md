@@ -1,4 +1,4 @@
 # Week 06
 
-- kubernetes cluster rke2 start
+- kubernetes
 - terraform beggining 

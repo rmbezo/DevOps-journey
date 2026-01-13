@@ -3,18 +3,18 @@ kind: Deployment
 metadata:
   name: nginx
   namespace: dev
-spec:
+spec:                   
   replicas: 1
   selector:
     matchLabels:
       app: nginx
-  template:
+  template:             
     metadata:
       labels:
         app: nginx
-    spec:
+    spec:                
     containers:
       - name: nginx
         image: nginx:1.29.4-alpine
         ports:
-          - containerPort: 80
+        - containerPort: 80

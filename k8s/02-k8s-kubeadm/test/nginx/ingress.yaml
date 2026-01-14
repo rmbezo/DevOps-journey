@@ -5,7 +5,7 @@ metadata:
   namespace: dev
 spec:
   rules:
-    - host: nginx.local
+    - host: nginx.local.lab
       http:
         paths:
           - path: /

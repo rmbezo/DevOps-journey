@@ -9,4 +9,4 @@
 
 ## Others directories
 
-- just practice writing
+- just practice writing.

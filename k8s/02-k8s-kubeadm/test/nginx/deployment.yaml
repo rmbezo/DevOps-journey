@@ -4,7 +4,7 @@ metadata:
   name: nginx
   namespace: dev
 spec:                   
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: nginx
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.29.4-alpine
+        image: nginx:1.29-alpine
         ports:
         - containerPort: 80
         resources:          

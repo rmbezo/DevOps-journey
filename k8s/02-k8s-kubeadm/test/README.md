@@ -19,3 +19,25 @@ u have to change /etc/hosts and put an ip of any node cluster nginx.local.lab , 
 
 - to check traefik port use: kubectl get svc traefik -n traefik
 
+
+
+
+
+# Test how traffik works and linux kernel of course 
+
+- 2 nginx web servers with ip show:
+
+exec inside pods and write inside /usr/share/nginx/html/index.html ip of node. Or use some nginx configure env's
+
+```
+kubectl exec -it <NAME_POD> -n dev -- sh
+```
+
+
+My example:
+
+
+![example](/k8s/images/image4.png)
+
+
+![example](/k8s/images/image5.png)

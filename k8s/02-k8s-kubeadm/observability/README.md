@@ -5,5 +5,12 @@
 ```
     helm repo add traefik https://traefik.github.io/charts
     helm repo update
+
+    helm upgrade --install traefik traefik/traefik -n traefik -f k8s/observability/traefik-values.yaml
 ```
-- 3. 
+- 3. Kube-prometheus-stack helm (prometheus + grafana + alertmanager + exporters) :
+```
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+```
+

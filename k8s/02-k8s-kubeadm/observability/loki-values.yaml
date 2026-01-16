@@ -1,16 +1,17 @@
 deploymentMode: SingleBinary
 
-simpleScalable:
-  write:
-    replicas: 0
-  read:
-    replicas: 0  
-  backend:
-    replicas: 0
-
-
 singleBinary:
   replicas: 1
+
+
+backend:
+  replicas: 0
+read:
+  replicas: 0
+write:
+  replicas: 0
+simpleScalable:
+  enabled: false
 
 loki:
   auth_enabled: false

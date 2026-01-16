@@ -1,15 +1,28 @@
+deploymentMode: SingleBinary
+
 loki:
   auth_enabled: false
-  useTestSchema: true
 
 singleBinary:
   replicas: 1
   persistence:
-    enabled: false
+    enabled: true
+    size: 10Gi
+    storageClass: local-path
   resources:
     requests:
       cpu: 50m
-      memory: 128Mi
+      memory: 256Mi
     limits:
-      cpu: 500m
-      memory: 512Mi
+      cpu: 1
+      memory: 1Gi
+
+# чтобы не плодить поды и не упираться в память/anti-affinity
+gateway:
+  enabled: false
+lokiCanary:
+  enabled: false
+chunksCache:
+  enabled: false
+resultsCache:
+  enabled: false

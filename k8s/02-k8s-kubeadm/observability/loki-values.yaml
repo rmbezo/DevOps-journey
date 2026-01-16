@@ -1,8 +1,18 @@
 deploymentMode: SingleBinary
 
+test:
+  enabled: false
+
+lokiCanary:
+  enabled: false
+
+gateway:
+  enabled: false
+
 loki:
   auth_enabled: false
   useTestSchema: true
+
   storage:
     type: filesystem
     bucketNames:
@@ -24,10 +34,13 @@ singleBinary:
       cpu: 1
       memory: 1Gi
 
-gateway:
-  enabled: false
-lokiCanary:
-  enabled: false
+read:
+  replicas: 0
+write:
+  replicas: 0
+backend:
+  replicas: 0
+
 chunksCache:
   enabled: false
 resultsCache:

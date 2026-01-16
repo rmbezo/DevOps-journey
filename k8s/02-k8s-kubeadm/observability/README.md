@@ -14,3 +14,13 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 helm repo update
 ```
 
+```
+helm upgrade --install kps prometheus-community/kube-prometheus-stack \
+  -n observability -f kps-values.yaml
+```
+
+- 4. Ingress for Grafana:
+
+```
+
+```

@@ -2,13 +2,20 @@ deploymentMode: SingleBinary
 
 loki:
   auth_enabled: false
+  useTestSchema: true
+  storage:
+    type: filesystem
+    bucketNames:
+      chunks: loki-chunks
+      ruler: loki-ruler
+      admin: loki-admin
 
 singleBinary:
   replicas: 1
   persistence:
     enabled: true
-    size: 10Gi
     storageClass: local-path
+    size: 10Gi
   resources:
     requests:
       cpu: 50m
@@ -17,7 +24,6 @@ singleBinary:
       cpu: 1
       memory: 1Gi
 
-# чтобы не плодить поды и не упираться в память/anti-affinity
 gateway:
   enabled: false
 lokiCanary:

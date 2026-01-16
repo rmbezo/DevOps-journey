@@ -1,6 +1,10 @@
 loki:
   auth_enabled: false
-
+  storage:
+    bucketNames:
+      chunks: "chunks"     
+      ruler: "ruler"       
+      admin: "admin"       
 singleBinary:
   replicas: 1
 

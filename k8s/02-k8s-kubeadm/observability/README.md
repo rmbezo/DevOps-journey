@@ -39,5 +39,5 @@ helm repo update
 ```
 
 ```
-helm upgrade --install loki grafana/loki -n observability -f k8s/observability/40-loki-values.yaml
+helm upgrade --install loki grafana/loki -n observability -f loki-values.yaml
 ```

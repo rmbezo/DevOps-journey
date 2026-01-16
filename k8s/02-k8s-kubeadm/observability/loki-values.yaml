@@ -23,18 +23,19 @@ singleBinary:
 
 gateway:
   enabled: false
+
+
 lokiCanary:
-  enabled: false
+  enabled: true    
+
 chunksCache:
   enabled: false
 resultsCache:
   enabled: false
 
-# ВСЕ SimpleScalable = 0
-simpleScalable:
-  write:
-    replicas: 0
-  read:
-    replicas: 0
-  backend:
-    replicas: 0
+backend:
+  replicas: 0
+read:
+  replicas: 0
+write:
+  replicas: 0

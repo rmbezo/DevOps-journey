@@ -1,4 +1,6 @@
-# Monitoring
+# Monitoring FAILED
+
+- ALL NEXT STEPS CAUSE ME A CRASHLOOPOFF BUT IT WILL WORK FOR YOU MONITORING IN /observability/
 
 ```
 kubectl create ns observability

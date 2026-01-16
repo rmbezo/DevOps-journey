@@ -1,0 +1,12 @@
+service:
+  type: NodePort
+
+ports:
+  web:
+    nodePort: 31566
+  websecure:
+    nodePort: 30824
+
+ingressClass:
+  enabled: true
+  isDefaultClass: false

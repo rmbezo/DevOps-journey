@@ -22,5 +22,10 @@ helm upgrade --install kps prometheus-community/kube-prometheus-stack \
 - 4. Ingress for Grafana:
 
 ```
-
+kubectl apply -f ingress-grafana.yaml
 ```
+
+- 5. web grafana enter :
+
+change /etc/hosts : <ANY_NODE_IP>   grafana.local.lab
+in url type: http://grafana.local.lab:<TRAEFIK_PORT>

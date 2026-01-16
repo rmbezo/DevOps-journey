@@ -2,6 +2,9 @@ deploymentMode: SingleBinary
 
 loki:
   auth_enabled: false
+  useTestSchema: true
+  commonConfig:          
+    path_prefix: /tmp   
   storage:
     type: filesystem
     bucketNames:
@@ -13,6 +16,11 @@ singleBinary:
   replicas: 1
   persistence:
     enabled: false
+  extraArgs:             
+    "-config.file=/etc/loki/single-binary.yaml"
+  securityContext:
+    runAsUser: 10001
+    fsGroup: 20001
   resources:
     requests:
       cpu: 50m
@@ -23,19 +31,17 @@ singleBinary:
 
 gateway:
   enabled: false
-
-
 lokiCanary:
-  enabled: true    
-
+  enabled: true
 chunksCache:
   enabled: false
 resultsCache:
   enabled: false
 
-backend:
-  replicas: 0
-read:
-  replicas: 0
-write:
-  replicas: 0
+simpleScalable:
+  write:
+    replicas: 0
+  read:
+    replicas: 0
+  backend:
+    replicas: 0

@@ -29,3 +29,15 @@ kubectl apply -f ingress-grafana.yaml
 
 change /etc/hosts : <ANY_NODE_IP>   grafana.local.lab
 in url type: http://grafana.local.lab:<TRAEFIK_PORT>
+
+
+- 6. Loki + Promtail :
+
+```
+helm repo add grafana https://grafana.github.io/helm-charts
+helm repo update
+```
+
+```
+helm upgrade --install loki grafana/loki -n observability -f k8s/observability/40-loki-values.yaml
+```

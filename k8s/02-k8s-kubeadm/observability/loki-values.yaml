@@ -1,0 +1,9 @@
+loki:
+  auth_enabled: false
+
+singleBinary:
+  replicas: 1
+
+# без персистентности на старте
+persistence:
+  enabled: false

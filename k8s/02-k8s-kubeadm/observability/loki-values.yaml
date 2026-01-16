@@ -2,8 +2,12 @@ deploymentMode: SingleBinary
 
 loki:
   auth_enabled: false
-  # Для лаба/тестов, чтобы не городить сразу полноценный schemaConfig:
   useTestSchema: true
+  storage:              # ← ДОБАВЬ ЭТУ СЕКЦИЮ ПОЛНОСТЬЮ!
+    bucketNames:
+      chunks: "chunks"
+      ruler: "ruler" 
+      admin: "admin"
 
 singleBinary:
   replicas: 1
@@ -17,41 +21,18 @@ singleBinary:
       cpu: 500m
       memory: 512Mi
 
+# Остальное оставь как есть...
 gateway:
   enabled: false
-
 lokiCanary:
   enabled: false
-
 chunksCache:
   enabled: false
-
 resultsCache:
   enabled: false
-
-
 backend:
   replicas: 0
 read:
   replicas: 0
 write:
-  replicas: 0
-
-ingester:
-  replicas: 0
-querier:
-  replicas: 0
-queryFrontend:
-  replicas: 0
-queryScheduler:
-  replicas: 0
-distributor:
-  replicas: 0
-compactor:
-  replicas: 0
-indexGateway:
-  replicas: 0
-bloomCompactor:
-  replicas: 0
-bloomGateway:
   replicas: 0

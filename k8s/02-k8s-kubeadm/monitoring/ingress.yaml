@@ -1,0 +1,14 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: grafana-route
+  namespace: observability
+spec:
+  entryPoints:
+    - websecure  # или web для HTTP
+  routes:
+    - match: Host(`grafana.local.lab`)
+      kind: Rule
+      services:
+        - name: kps-grafana
+          port: 80

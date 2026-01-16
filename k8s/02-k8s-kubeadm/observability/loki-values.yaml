@@ -1,14 +1,23 @@
 deploymentMode: SingleBinary
 
+simpleScalable:
+  write:
+    replicas: 0
+  read:
+    replicas: 0  
+  backend:
+    replicas: 0
+
+
+singleBinary:
+  replicas: 1
+
 loki:
   auth_enabled: false
   storage:
     type: filesystem
     bucketNames:
       chunks: "chunks"
-
-singleBinary:
-  replicas: 1
 
 persistence:
   enabled: false

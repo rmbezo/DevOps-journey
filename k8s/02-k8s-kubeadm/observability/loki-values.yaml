@@ -1,21 +1,57 @@
-
-simpleScalable:
-  enabled: true
-  write:
-    replicas: 1
-  read:
-    replicas: 1
-  backend:
-    enabled: false
+deploymentMode: SingleBinary
 
 loki:
   auth_enabled: false
+  # Для лаба/тестов, чтобы не городить сразу полноценный schemaConfig:
   useTestSchema: true
-  storage:
-    bucketNames:
-      chunks: "chunks"
-      ruler: "ruler"
-      admin: "admin"
 
-persistence:
+singleBinary:
+  replicas: 1
+  persistence:
+    enabled: false
+  resources:
+    requests:
+      cpu: 50m
+      memory: 128Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+
+gateway:
   enabled: false
+
+lokiCanary:
+  enabled: false
+
+chunksCache:
+  enabled: false
+
+resultsCache:
+  enabled: false
+
+
+backend:
+  replicas: 0
+read:
+  replicas: 0
+write:
+  replicas: 0
+
+ingester:
+  replicas: 0
+querier:
+  replicas: 0
+queryFrontend:
+  replicas: 0
+queryScheduler:
+  replicas: 0
+distributor:
+  replicas: 0
+compactor:
+  replicas: 0
+indexGateway:
+  replicas: 0
+bloomCompactor:
+  replicas: 0
+bloomGateway:
+  replicas: 0

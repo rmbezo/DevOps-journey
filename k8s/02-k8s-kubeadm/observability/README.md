@@ -48,3 +48,12 @@ helm install loki grafana/loki -n observability -f loki-values.yaml
 helm upgrade --install promtail grafana/promtail -n observability -f promtail-values.yaml
 ```
 
+- 8. Loki + Grafana :
+```
+kubectl apply -f grafana-datasource-loki.yaml
+```
+
+- 9. Building metrics:
+
+Grafana → Connections → Data sources
+

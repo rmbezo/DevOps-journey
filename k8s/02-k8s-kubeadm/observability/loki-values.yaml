@@ -1,17 +1,35 @@
+deploymentMode: SingleBinary
+
+simpleScalable:
+  write:
+    replicas: 0
+  read: 
+    replicas: 0
+  backend:
+    replicas: 0
+
+# singleBinary
+singleBinary:
+  replicas: 1
+  persistence:
+    enabled: false
+
+# Отключаем кэши
+loki-chunks-cache:
+  enabled: false
+loki-results-cache:
+  enabled: false
+gateway:
+  enabled: false
+
 loki:
   auth_enabled: false
+  useTestSchema: true  
   storage:
-    type: filesystem
-    bucketNames:          
+    bucketNames:
       chunks: "chunks"
-      ruler: "ruler"      
-      admin: "admin"      
-  schemaConfig:
-    configs:
-    - from: "2024-01-01"
-      store: tsdb
-      object_store: filesystem
-      schema: v13
-      index:
-        prefix: index_
-        period: 24h
+      ruler: "ruler"
+      admin: "admin"
+
+persistence:
+  enabled: false

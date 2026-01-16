@@ -2,11 +2,11 @@ deploymentMode: SingleBinary
 
 loki:
   auth_enabled: false
-  useTestSchema: true
-  storage:              # ← ДОБАВЬ ЭТУ СЕКЦИЮ ПОЛНОСТЬЮ!
+  storage:
+    type: filesystem
     bucketNames:
       chunks: "chunks"
-      ruler: "ruler" 
+      ruler: "ruler"
       admin: "admin"
 
 singleBinary:
@@ -21,7 +21,6 @@ singleBinary:
       cpu: 500m
       memory: 512Mi
 
-# Остальное оставь как есть...
 gateway:
   enabled: false
 lokiCanary:
@@ -30,9 +29,12 @@ chunksCache:
   enabled: false
 resultsCache:
   enabled: false
-backend:
-  replicas: 0
-read:
-  replicas: 0
-write:
-  replicas: 0
+
+# ВСЕ SimpleScalable = 0
+simpleScalable:
+  write:
+    replicas: 0
+  read:
+    replicas: 0
+  backend:
+    replicas: 0

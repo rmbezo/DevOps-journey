@@ -18,3 +18,17 @@ kubectl -n observability get secret kps-grafana -o jsonpath='{.data.admin-passwo
 - Зайти на наш grafana: 
 
 http://grafana.local.lab:<PORT_TRAEFIK> перед этим у себя в /etc/hosts/ добавить любую ноду 192.0.2.12   grafana.local.lab
+
+
+
+## Grafana Loki
+
+```
+helm repo add grafana https://grafana.github.io/helm-charts
+helm repo update
+
+helm upgrade --install loki grafana/loki-stack \
+  -n observability \
+  --set grafana.enabled=false \
+  --set promtail.enabled=true
+```

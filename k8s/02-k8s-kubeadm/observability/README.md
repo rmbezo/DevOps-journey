@@ -44,3 +44,7 @@ helm upgrade --install loki grafana/loki -n observability -f loki-values.yaml
 
 - 7. Promtail :
 
+```
+helm upgrade --install promtail grafana/promtail -n observability -f promtail-values.yaml
+```
+

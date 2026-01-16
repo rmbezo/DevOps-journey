@@ -1,32 +1,17 @@
-deploymentMode: SingleBinary
-
-singleBinary:
-  replicas: 1
-
-backend:
-  replicas: 0
-read:
-  replicas: 0
-write:
-  replicas: 0
-simpleScalable:
-  enabled: false
-
 loki:
   auth_enabled: false
   storage:
     type: filesystem
-    bucketNames:
+    bucketNames:          
       chunks: "chunks"
-  schemaConfig:           
+      ruler: "ruler"      
+      admin: "admin"      
+  schemaConfig:
     configs:
-    - from: "2024-01-01" 
+    - from: "2024-01-01"
       store: tsdb
       object_store: filesystem
       schema: v13
       index:
         prefix: index_
         period: 24h
-
-persistence:
-  enabled: false         

@@ -1,0 +1,3 @@
+config:
+  clients:
+    - url: http://loki-gateway.observability.svc.cluster.local/

@@ -1,14 +1,19 @@
-apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
+apiVersion: networking.k8s.io/v1
+kind: Ingress
 metadata:
-  name: grafana-route
+  name: grafana
   namespace: observability
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
 spec:
-  entryPoints:
-    - websecure  # или web для HTTP
-  routes:
-    - match: Host(`grafana.local.lab`)
-      kind: Rule
-      services:
-        - name: kps-grafana
-          port: 80
+  rules:
+    - host: grafana.local.lab
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: kps-grafana  # из твоего get svc
+                port:
+                   number: 80

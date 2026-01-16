@@ -1,30 +1,16 @@
-deploymentMode: SingleBinary
 
 simpleScalable:
+  enabled: true
   write:
-    replicas: 0
-  read: 
-    replicas: 0
+    replicas: 1
+  read:
+    replicas: 1
   backend:
-    replicas: 0
-
-# singleBinary
-singleBinary:
-  replicas: 1
-  persistence:
     enabled: false
-
-# Отключаем кэши
-loki-chunks-cache:
-  enabled: false
-loki-results-cache:
-  enabled: false
-gateway:
-  enabled: false
 
 loki:
   auth_enabled: false
-  useTestSchema: true  
+  useTestSchema: true
   storage:
     bucketNames:
       chunks: "chunks"

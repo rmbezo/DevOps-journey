@@ -1,0 +1,4 @@
+grafana:
+  grafana.ini:
+    server:
+      root_url: http://grafana.local.lab/

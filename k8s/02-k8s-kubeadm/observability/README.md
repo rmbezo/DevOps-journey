@@ -57,3 +57,8 @@ kubectl apply -f grafana-datasource-loki.yaml
 
 Grafana → Connections → Data sources
 
+
+- 10. Prometheus metrics: 
+
+
+![Metrics](./images/image.png)

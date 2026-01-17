@@ -66,3 +66,5 @@ Grafana → Connections → Data sources
 
 
 ![Metrics](./images/image.png)
+
+- Others dashboards in: /dashboards.md

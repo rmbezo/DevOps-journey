@@ -12,7 +12,8 @@ gateway:
 loki:
   auth_enabled: false
   useTestSchema: true
-
+  commonConfig:
+    replication_factor: 1
   storage:
     type: filesystem
     bucketNames:

@@ -55,6 +55,10 @@ kubectl apply -f grafana-datasource-loki.yaml
 
 - 9. Building metrics:
 
+grafana pass:
+```
+kubectl -n observability get secret kps-grafana -o jsonpath='{.data.admin-password}' | base64 -d; echo
+```
 Grafana → Connections → Data sources
 
 

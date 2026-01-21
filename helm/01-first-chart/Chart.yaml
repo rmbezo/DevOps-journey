@@ -1,0 +1,18 @@
+---
+apiVersion: v3
+name        : App-HelmChart
+description : A Helm chart for Kubernetes
+type        : application
+version     : 0.1.0 # Version of Helm the chart
+appVersion  : "1.2.3" # Version of the application enclosed in the chart 
+
+keywords:
+  - appache
+  - http
+  - https
+  - Roman
+
+maintainers:
+  - name: Roman
+    email: roman@mail.com
+    url: roman.nz

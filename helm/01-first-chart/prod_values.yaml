@@ -1,0 +1,8 @@
+---
+
+# Values for production
+
+container:
+  image: adv4000/k8sphp:version2
+
+replicaCount: 4

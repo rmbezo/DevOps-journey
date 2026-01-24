@@ -7,3 +7,10 @@
 terraform.tfstate.backup
 crash.log
 override.tf
+
+
+.env
+.envrc
+.DS_Store
+.vscode/
+.idea/

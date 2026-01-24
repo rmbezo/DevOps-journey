@@ -6,3 +6,12 @@ I practice terraform with clouds and libvirt on my server
 1. Install KVM/Libvirt
 2. Install Terraform
 3. Practice with terraform 
+
+
+
+```
+terraform init
+terraform plan -var-file="secrets.tfvars"
+terraform apply -var-file="secrets.tfvars"
+terraform destroy 
+```

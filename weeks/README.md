@@ -58,3 +58,7 @@
 # Week 07
 
 - Practicing kubernetes + helm
+
+# Week 08-09
+
+Kubernetes, helm, databases, ansible, terraform, brokers, CI/CD Gitlab /// Practice

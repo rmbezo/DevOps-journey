@@ -15,7 +15,7 @@ provider "libvirt" {
 resource "libvirt_volume" "vm_disks" {
   count  = var.vm_count
   name   = "${var.vm_names[count.index]}-disk.qcow2"
-  pool   = "default"
+  pool   = "mypool" 
   size   = var.vm_disk_size
   format = "qcow2"
 }

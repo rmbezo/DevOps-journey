@@ -1,22 +1,6 @@
 variable "libvirt_uri" {
-  description = "Libvirt connection URI"
+  description = "Libvirt connection URI для удалённого подключения"
   type        = string
-}
-
-variable "server_ip" {
-  description = "IP сервера с libvirt"
-  type        = string
-}
-
-variable "server_user" {
-  description = "Пользователь сервера"
-  type        = string
-}
-
-variable "ssh_key_path" {
-  description = "Путь к SSH приватному ключу"
-  type        = string
-  default     = "~/.ssh/terraform-server-key"
 }
 
 variable "vm_count" {

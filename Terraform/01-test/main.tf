@@ -13,11 +13,11 @@ provider "libvirt" {
 
 # Создаём диски для каждой VM
 resource "libvirt_volume" "vm_disks" {
-  count          = var.vm_count
-  name           = "${var.vm_names[count.index]}-disk.qcow2"
-  pool           = "default"
-  size           = var.vm_disk_size
-  format         = "qcow2"
+  count  = var.vm_count
+  name   = "${var.vm_names[count.index]}-disk.qcow2"
+  pool   = "default"
+  size   = var.vm_disk_size
+  format = "qcow2"
 }
 
 # Создаём сами VM
@@ -46,6 +46,5 @@ resource "libvirt_domain" "vms" {
     autoport = true
   }
 
-  # Автозапуск
   autostart = true
 }

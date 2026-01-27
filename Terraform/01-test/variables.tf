@@ -1,5 +1,5 @@
 variable "libvirt_uri" {
-  description = "Libvirt connection URI для удалённого подключения"
+  description = "Libvirt connection URI"
   type        = string
 }
 
@@ -22,13 +22,13 @@ variable "vm_memory" {
 }
 
 variable "vm_vcpu" {
-  description = "Количество vCPU для VM"
+  description = "Количество vCPU"
   type        = number
   default     = 2
 }
 
 variable "vm_disk_size" {
-  description = "Размер диска VM в байтах (5GB = 5368709120)"
+  description = "Размер диска в байтах (20GB = 21474836480)"
   type        = number
-  default     = 5368709120  # 5GB
+  default     = 21474836480  # 20GB для k8s
 }

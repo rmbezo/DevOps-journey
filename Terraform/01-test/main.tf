@@ -11,39 +11,34 @@ provider "libvirt" {
   uri = var.libvirt_uri
 }
 
-# Скачиваем базовый Ubuntu Cloud Image
-resource "libvirt_volume" "ubuntu_base" {
-  name   = "ubuntu-22.04-base.qcow2"
-  pool   = "default"
-  source = "https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img"
-  format = "qcow2"
-}
-
 # Создаём диски для каждой VM на основе базового образа
 resource "libvirt_volume" "vm_disks" {
   count          = var.vm_count
   name           = "${var.vm_names[count.index]}-disk.qcow2"
   pool           = "default"
-  base_volume_id = libvirt_volume.ubuntu_base.id
+
+  # Ссылаемся на точное имя файла, который уже лежит в /var/lib/libvirt/images/ на сервере
+  base_volume_name = "jammy-server-cloudimg-amd64.img" 
+  
   size           = var.vm_disk_size
   format         = "qcow2"
 }
 
 # Cloud-init конфигурация
-data "template_file" "user_data" {
-  count    = var.vm_count
-  template = file("${path.module}/cloud_init.cfg")
-  vars = {
-    hostname = var.vm_names[count.index]
-  }
-}
+#data "template_file" "user_data" {
+ # count    = var.vm_count
+#  template = file("${path.module}/cloud_init.cfg")
+ # vars = {
+ #   hostname = var.vm_names[count.index]
+#  }
+#}
 
-resource "libvirt_cloudinit_disk" "commoninit" {
-  count     = var.vm_count
-  name      = "${var.vm_names[count.index]}-cloudinit.iso"
-  user_data = data.template_file.user_data[count.index].rendered
-  pool      = "default"
-}
+#resource "libvirt_cloudinit_disk" "commoninit" {
+#  count     = var.vm_count
+#  name      = "${var.vm_names[count.index]}-cloudinit.iso"
+#  user_data = data.template_file.user_data[count.index].rendered
+#  pool      = "default"
+#}
 
 # Создаём сами VM
 resource "libvirt_domain" "vms" {
@@ -52,7 +47,7 @@ resource "libvirt_domain" "vms" {
   memory    = var.vm_memory
   vcpu      = var.vm_vcpu
 
-  cloudinit = libvirt_cloudinit_disk.commoninit[count.index].id
+ # cloudinit = libvirt_cloudinit_disk.commoninit[count.index].id
 
   disk {
     volume_id = libvirt_volume.vm_disks[count.index].id
@@ -60,7 +55,7 @@ resource "libvirt_domain" "vms" {
 
   network_interface {
     bridge = "virbr0"
-    wait_for_lease = true
+    wait_for_lease = false
   }
 
   console {

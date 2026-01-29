@@ -34,8 +34,24 @@ virsh list --all
 virsh vol-list default
 ```
 
+## Error with ssh connect
 
 ```
+# Запустите ssh-agent
+eval $(ssh-agent)
+
+# Добавьте ваш ключ
+ssh-add ~/.ssh/terraform-server-key
+
+# Проверьте, что ключ добавлен
+ssh-add -l
+```
+
+
+
+```
+# Connect to VM
+
 # Список всех VM (работающих и выключенных)
 virsh list --all
 

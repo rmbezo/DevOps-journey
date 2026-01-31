@@ -59,6 +59,8 @@
 
 - Practicing kubernetes + helm
 
-# Week 08-09
+# Week 08-09 26 January
 
 Kubernetes, helm, databases, ansible, terraform, brokers, CI/CD Gitlab /// Practice
+
+# Argo Harbor ELK Vault Yandex Kafka DB replications Jaeger Golang Python Service Mesh Gitlab CI practice

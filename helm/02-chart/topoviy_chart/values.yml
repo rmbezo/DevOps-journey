@@ -1,0 +1,8 @@
+---
+
+# Values for my chart
+
+container:
+  image: adv4000/k8sphp:latest
+
+replicaCount: 2

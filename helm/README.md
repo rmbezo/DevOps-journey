@@ -43,3 +43,27 @@ helm install app test-chart/ -f prod_values
 ```
 
 .
+
+
+
+## DOCKER IN RUSSIA
+
+Settings for mirror:
+On every node:
+```
+sudo mkdir -p /etc/containerd/certs.d/docker.io
+
+sudo nano /etc/containerd/certs.d/docker.io/hosts.toml
+```
+
+in:
+
+```
+server = "https://docker.io"
+
+[host."https://dockerhub.timeweb.cloud"]
+  capabilities = ["pull", "resolve"]
+
+[host."https://mirror.gcr.io"]
+  capabilities = ["pull", "resolve"]
+```

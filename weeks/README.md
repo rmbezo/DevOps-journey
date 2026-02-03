@@ -64,3 +64,10 @@
 Kubernetes, helm, databases, ansible, terraform, brokers, CI/CD Gitlab /// Practice
 
 # Argo Harbor ELK Vault Yandex Kafka DB replications Jaeger Golang Python Service Mesh Gitlab CI practice
+
+
+# Week 10 3 February
+
+Start looking for a job (firts interviews), golang, kafka/rabbitmq, redis, mongodb, argo, harbor, nexus, k8s topchik karoche
+
+

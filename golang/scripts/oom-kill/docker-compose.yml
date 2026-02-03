@@ -1,0 +1,10 @@
+services:
+  oom-test:
+    build: .  
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'    # 50% одного ядра
+          memory: 512M    # Жесткий лимит памяти (OOM при превышении)
+        reservations:
+          memory: 128M    # Гарантированная память

@@ -63,7 +63,9 @@
 
 Kubernetes, helm, databases, ansible, terraform, brokers, CI/CD Gitlab /// Practice
 
-# Argo Harbor ELK Vault Yandex Kafka DB replications Jaeger Golang Python Service Mesh Gitlab CI practice
+```
+Argo Harbor ELK Vault Yandex Kafka DB replications Jaeger Golang Python Service Mesh Gitlab CI practice
+```
 
 
 # Week 10 3 February

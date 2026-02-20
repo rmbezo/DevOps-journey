@@ -73,3 +73,7 @@ Argo Harbor ELK Vault Yandex Kafka DB replications Jaeger Golang Python Service 
 Start looking for a job (firts interviews), golang, kafka/rabbitmq, redis, mongodb, argo, harbor, nexus, k8s topchik karoche
 
 
+# 23 February
+
+Interview grind + Gentoo 
+Vim , xi816 , C RUst other low level staff

@@ -77,3 +77,5 @@ Start looking for a job (firts interviews), golang, kafka/rabbitmq, redis, mongo
 
 Interview grind + Gentoo 
 Vim , xi816 , C RUst other low level staff
+
+![Gentoo](gentoo.png)

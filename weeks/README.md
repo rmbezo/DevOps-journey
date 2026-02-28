@@ -79,3 +79,9 @@ Interview grind + Gentoo
 Vim , xi816 , C RUst other low level staff
 
 ![Gentoo](./images/gentoo.png)
+
+
+# 28 February 2026
+
+Started learning Golang and how to program
+

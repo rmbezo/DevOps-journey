@@ -1,5 +1,3 @@
-
-
 num1 = float(input("Type first number: "))
 op = input("Type operator: ")
 num2 = float(input("Type second num: "))

@@ -1,5 +1,7 @@
 package payments
 
+import "fmt"
+
 type PaymentMethod interface {
 	Pay(usd int, desc string) int
 	Cancel(id int)
@@ -7,28 +9,35 @@ type PaymentMethod interface {
 
 type PaymentModule struct {
 	paymentMethod PaymentMethod
+	history       map[int]string // Добавили хранилище: ID -> Описание
 }
 
-func NewPaymentModule(paymentMethod PaymentMethod) *PaymentModule {
+func NewPaymentModule(method PaymentMethod) *PaymentModule {
 	return &PaymentModule{
-		paymentMethod: paymentMethod,
+		paymentMethod: method,
+		history:       make(map[int]string),
 	}
 }
 
-// Принимает описание оплаты
-// Возвращает ID проведенной операции
 func (p *PaymentModule) Pay(desc string, usd int) int {
-
+	id := p.paymentMethod.Pay(usd, desc)
+	p.history[id] = desc // Запоминаем операцию
+	return id
 }
 
-// Принимает ID
-// Отменяет операцию
-func (p PaymentModule) Cancel() {}
+func (p *PaymentModule) Cancel(id int) {
+	p.paymentMethod.Cancel(id)
+	delete(p.history, id) // Удаляем из истории при отмене
+}
 
-// Принимает ID
-// Отдает ID + Description
-func (p PaymentModule) Info() {}
+func (p *PaymentModule) Info(id int) string {
+	desc, ok := p.history[id]
+	if !ok {
+		return "Операция не найдена"
+	}
+	return fmt.Sprintf("ID: %d | Описание: %s", id, desc)
+}
 
-// Ничего не принимает
-// Возвращает всед
-func (p PaymentModule) AllInfo() {}
+func (p *PaymentModule) AllInfo() map[int]string {
+	return p.history
+}

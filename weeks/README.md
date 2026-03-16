@@ -85,3 +85,8 @@ Vim , xi816 , C RUst other low level stuff
 
 Started learning Golang and how to program
 
+
+
+# 15 March 2026
+
+Accidentally forgot to back up Obsidian with all my notes. 70+ days of productive notes are in the trash — all because I decided to switch from Omarchy to Void Linux. But now I'm back on Omarchy; it's just better than anything

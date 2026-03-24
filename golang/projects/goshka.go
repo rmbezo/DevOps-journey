@@ -54,10 +54,12 @@ func main() {
 		sliceStringBinary = append(sliceStringBinary, string(i))
 	}
 
+	// Channel
+	tranferPoint := make(chan int)
 	// Binary search
 	for {
-		fmt.Println("Okay let's start binary search with integers")
-		fmt.Print("Type your number for binary search: ")
+		//fmt.Println("Okay let's start binary search with integers")
+		fmt.Print("Type your number for search: ")
 
 		if ok := scanner.Scan(); !ok {
 			fmt.Println("Error!")
@@ -73,7 +75,8 @@ func main() {
 			return
 		}
 
-		go binarySearch(sliceIntBinary, numberGuessBinary)
+		go binarySearchInt(sliceIntBinary, numberGuessBinary, tranferPoint)
+		go simpleSearchInt(sliceIntBinary, numberGuessBinary, tranferPoint)
 	}
 
 	// Bubble sort
@@ -85,15 +88,20 @@ func main() {
 	//
 }
 
-func simpleSearchInt(l []int, g int) {
+func simpleSearchInt(l []int, g int, ch chan int) int {
+	simpleStart := time.Now()
 	for i := 0; i < len(l); i++ {
 		if l[i] == g {
-			fmt.Printf()
+			fmt.Printf("Simple search Int iterations: %v, time: %v\n", i, time.Since(simpleStart))
+			ch <- i
+			return i
 		}
 	}
+	fmt.Println("Simple search didn't found number.")
+	return -1
 }
 
-func binarySearchInt(l []int, g int) int {
+func binarySearchInt(l []int, g int, ch chan int) int {
 	binaryStart := time.Now()
 	high, low := len(l)-1, 0
 	i := 0
@@ -102,6 +110,7 @@ func binarySearchInt(l []int, g int) int {
 		mid := low + (high-low)/2
 		if g == l[mid] {
 			fmt.Printf("Binary search takes %v iterations. Time: %v\n", i, time.Since(binaryStart))
+			ch <- mid
 			return mid
 		} else if g > l[mid] {
 			low = mid + 1

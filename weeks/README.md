@@ -66,11 +66,9 @@ Kubernetes, helm, databases, ansible, terraform, brokers, CI/CD Gitlab /// Pract
 Argo Harbor ELK Vault Yandex Kafka DB replications Jaeger Golang Python Service Mesh Gitlab CI practice
 ```
 
-
 # Week 10 3 February
 
 Start looking for a job (firts interviews), golang, kafka/rabbitmq, redis, mongodb, argo, harbor, nexus, k8s topchik karoche
-
 
 # 21 February
 
@@ -83,8 +81,6 @@ Vim, xi816, C, Rust and other low level stuff
 # 28 February 2026
 
 Started learning Golang and how to program
-
-
 
 # 15 March 2026
 

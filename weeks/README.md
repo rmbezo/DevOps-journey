@@ -3,7 +3,6 @@
 - Linux - (linuxsurvival.com(базовые команды с практическими примерами)) + WSL2 + Работа с виртуальной машиной + сети(cURL, ping, ss/netstat, права доступа)
 процессы и потоки, SIGINT, SIGTERM и т.д., Load Average, состояния процессов. Systemctl. Права и пользователи, файловая система, загрузка и инициализация. Ping, curl -I, ss -lntu/p, traceroute, ufw - uncomplicated firewall (работа с портами и доступами). iptables.   
 
-
 - SSH - Подключение к ВМ из терминала Windows + создание и подключение к репозиторию через SSH
 
 - Bash scripts - basics
@@ -76,7 +75,7 @@ Start looking for a job (firts interviews), golang, kafka/rabbitmq, redis, mongo
 # 21 February
 
 Interview grind + Gentoo 
-Vim , xi816 , C RUst other low level stuff
+Vim, xi816, C, Rust and other low level stuff
 
 ![Gentoo](./images/gentoo.png)
 
@@ -90,3 +89,10 @@ Started learning Golang and how to program
 # 15 March 2026
 
 Accidentally forgot to back up Obsidian with all my notes. 70+ days of productive notes are in the trash — all because I decided to switch from Omarchy to Void Linux. But now I'm back on Omarchy; it's just better than anything
+
+# 26 March 2026
+
+Preparation intern SRE position:
+SRE fundamentals (Google SRE books), troubleshooting SRE, system design SRE,
+network deeper (Andrew Tanenbaum, etc), Linux, HTTP/HTTPS, Golang programming,
+Algorithms, AI with George Hotz stuff.

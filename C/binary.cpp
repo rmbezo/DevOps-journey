@@ -3,18 +3,18 @@
 using namespace std;
 
 int binary_search(const vector<int>& a, int s) {
-  int min = 0;
-  int max = a.size() - 1;
+  int left = 0;
+  int right = a.size() - 1;
   int res;
   int steps = 0;
-  int mid = (max + min) / 2;
-  for (int i = 0; i < (int)a.size(); i++) {
+  int mid = (left + right) / 2;
+  while (left <= right) {
     steps += 1;
-    mid = min + (max - min) / 2;
+    mid = left + (right - left) / 2;
     if (s > a[mid]) {
-      min = mid + 1;
+      left = mid + 1;
     } else if (s < a[mid]) {
-      max = mid - 1;
+      right = mid - 1;
     } else {
       cout << "binary steps: " << steps << "\n";
       return res = mid;

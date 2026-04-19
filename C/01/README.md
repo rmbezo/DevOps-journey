@@ -12,7 +12,12 @@ vector<int>** - pointer on pointer
 
 vector<int>& x - link for functions
 
-c++              go 
-a.size() ==   len(a)
-a[i]     ==   a[i]
-a[i] = x ==   a[i] = x
+----
+c++      ||         go 
+-----
+a.size() ||   len(a)
+-----
+a[i]     ||   a[i]
+-----
+a[i] = x ||   a[i] = x
+-----
